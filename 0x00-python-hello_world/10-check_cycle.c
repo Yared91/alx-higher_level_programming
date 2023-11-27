@@ -18,8 +18,7 @@ return (0);
 rapid = list;
 sluggish = list;
 
-do
-{
+do {
 sluggish = sluggish->next;
 rapid = rapid->next;
 
