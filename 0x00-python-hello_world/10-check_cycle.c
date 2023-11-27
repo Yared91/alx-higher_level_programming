@@ -18,7 +18,8 @@ return (0);
 rapid = list;
 sluggish = list;
 
-do {
+while (sluggish != NULL && rapid != NULL && rapid->next != NULL)
+{
 sluggish = sluggish->next;
 rapid = rapid->next;
 
@@ -26,7 +27,7 @@ if (sluggish == rapid)
 {
 return (1);
 }
-} while (sluggish != NULL && rapid != NULL && rapid->next != NULL);
+}
 
 return (0);
 }
