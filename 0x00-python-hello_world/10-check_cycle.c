@@ -15,13 +15,13 @@ if (!list || !list->next)
 return (0);
 }
 
-rapid = list;
-sluggish = list;
+rapid = list->next;
+sluggish = list->next->next;
 
 while (sluggish != NULL && rapid != NULL && rapid->next != NULL)
 {
 sluggish = sluggish->next;
-rapid = rapid->next;
+rapid = rapid->next->next;
 
 if (sluggish == rapid)
 {
