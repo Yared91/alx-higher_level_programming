@@ -8,15 +8,15 @@
 
 int check_cycle(listint_t *list)
 {
-listint_t *rapid = 0, *sluggish = 0;
+listint_t *rapid, *sluggish;
 
 if (list == NULL || list->next == NULL)
 {
 return (0);
 }
 
-rapid = list->next;
-sluggish = list->next->next;
+sluggish = list;
+rapid = list;
 
 while (sluggish && rapid && rapid->next)
 {
