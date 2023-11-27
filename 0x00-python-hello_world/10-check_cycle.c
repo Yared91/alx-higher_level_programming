@@ -10,7 +10,7 @@ int check_cycle(listint_t *list)
 {
 listint_t *rapid = 0, *sluggish = 0;
 
-if (!list || !list->next)
+if (list == NULL || list->next == NULL)
 {
 return (0);
 }
@@ -18,16 +18,15 @@ return (0);
 rapid = list->next;
 sluggish = list->next->next;
 
-while (sluggish != NULL && rapid != NULL && rapid->next != NULL)
+while (sluggish && rapid && rapid->next)
 {
-sluggish = sluggish->next;
-rapid = rapid->next->next;
-
 if (sluggish == rapid)
 {
 return (1);
 }
-}
 
+sluggish = sluggish->next;
+rapid = rapid->next->next;
+}
 return (0);
 }
