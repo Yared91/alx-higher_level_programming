@@ -15,8 +15,8 @@ if (list == NULL || list->next == NULL)
 return (0);
 }
 
-sluggish = list;
-rapid = list;
+sluggish = list->next;
+rapid = list->next->next;
 
 while (sluggish && rapid && rapid->next)
 {
