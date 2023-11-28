@@ -1,4 +1,4 @@
 #!/usr/bin//python3
-# Author - Bamidele Adefolaju
-def (a, b):
+
+def pow(a, b):
     return (a ** b)
