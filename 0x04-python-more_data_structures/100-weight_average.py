@@ -8,4 +8,3 @@ def weight_average(my_list=[]):
         total += i[0] * i[1]
         weight += i[1]
     return total / weight
-
