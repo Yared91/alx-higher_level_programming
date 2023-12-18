@@ -71,7 +71,7 @@ int i = 0;
 fflush(stdout);
 printf("[*] Python list info\n");
 
-if (!PyList_CheckExact(p))
+if (PyList_CheckExact(p))
 {
 size = PyList_GET_SIZE(p);
 printf("[*] Size of the Python List = %zd\n", size);
