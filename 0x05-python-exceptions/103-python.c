@@ -10,6 +10,7 @@ void print_python_float(PyObject *p)
 {
 	double value = 0;
 	char *string = NULL;
+        int Py_DTSF_ADD_DOT_O = 0;
 
 	fflush(stdout);
 	printf("[.] float object info\n");
@@ -63,7 +64,7 @@ void print_python_bytes(PyObject *p)
 void print_python_list(PyObject *p)
 {
 	Py_ssize_t size = 0;
-	Py_Object *item;
+	PyObject *item;
 	int i = 0;
 
 	fflush(stdout);
