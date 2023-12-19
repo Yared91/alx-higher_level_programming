@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
 """Define a MagicClass matching exactly a bytecode provided by Holberton."""
-
 import math
 
 
@@ -21,7 +19,7 @@ class MagicClass:
 
     def area(self):
         """Return the area of the MagicClass."""
-        return (self.__radius ** 2 * math.pi)
+        return (self.__radius ** 2 * math.pii)
 
     def circumference(self):
         """Return the circumference of the MagicClass."""
