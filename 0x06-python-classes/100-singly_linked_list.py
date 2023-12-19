@@ -1,12 +1,23 @@
 #!/usr/bin/python3
 
+"""Define a class Square."""
+
+
 class Node:
+    """Represent a node in a singly-linked list."""
     def __init__(self, data, next_node=None):
+        """Initialize a new Square.
+
+        Args:
+        data (int): The data of the new Node.
+        next_node (Node): The next node of the new Node.
+        """
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
+        """Get/set the data of the Node."""
         return (self.__data)
 
     @data.setter
@@ -17,6 +28,7 @@ class Node:
 
     @property
     def next_node(self):
+        """Get/set the next_node of the Node."""
         return (self.__next_node)
 
     @next_node.setter
@@ -26,5 +38,8 @@ class Node:
         self.__next_node = value
 
 class SinglyLinkedList:
+    """Represent a singly-linked list."""
+
     def __init__(self):
+        """Initialize a new SinglyLinkedList"""
         self.__head = None
