@@ -43,3 +43,30 @@ class SinglyLinkedList:
     def __init__(self):
         """Initialize a new SinglyLinkedList"""
         self.__head = None
+
+    def __str__(self):
+        """Define the print() representation of a Square."""
+        string = ""
+        while tmp is not None:
+            string += str(tmp.data)
+            tmp = tmp.next_node
+            if tmp is not None:
+                string += "\n"
+        return string
+    def sorted_insert(self, value):
+        """Get/set the sorted_insert of the Node."""
+        new = Node(value)
+        if self.__head is None:
+            self.__head = new
+            return
+
+        tmp = self.__head
+        if new.data < tmp.data:
+            new.next_node = self.__head
+            self.__head = new
+            return
+        while (tmp.next_node is not None) and (new.data > tmp.next_node.data):
+            tmp = tmp.next_node
+            new.next_node = tmp.next_node
+            tmp.next_node = new
+            return
