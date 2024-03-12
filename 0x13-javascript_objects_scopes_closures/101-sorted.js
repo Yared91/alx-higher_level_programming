@@ -7,7 +7,7 @@ for (let key in dict) {
   if (newDic[dict[key]] === undefined) {
     newDic[dict[key]] = [];
   }
-  newDic[dict[key]].push(key);
+	newDic[dict[key]].push(key);
 }
 
 console.log(newDic);
