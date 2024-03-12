@@ -10,4 +10,5 @@ for (let key in dict) {
     newDict[dict[key]].push(key);
   }
 }
+
 console.log(newDict);
