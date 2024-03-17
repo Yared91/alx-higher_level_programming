@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all States and corresponding Cities in the database hbtn_0e_101_usa."""
+"""Lists all States and corresponding Cities in database hbtn_0e_101_usa."""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
