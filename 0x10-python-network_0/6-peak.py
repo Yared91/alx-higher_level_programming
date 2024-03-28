@@ -1,31 +1,34 @@
 #!/usr/bin/python3
 """
-Definition of peak algorithm.
+Function that finds a peak in a list of unsorted integers
 """
 
 
 def find_peak(list_of_integers):
     """
-    defines the find_peak function.
+    Handles elements with 1 or 2 elements.
+    Gets the middle element
+    checks if the middle element is a peak
+    looks the peak that is greater than both left and right
     """
     if len(list_of_integers) == 0:
         return None
 
-    count = list_of_integers
-    begin = 0
-    end = len(count)-1
+    lists = list_of_integers
+    start = 0
+    last = len(lists)-1
 
-    if count[begin] > count[begin+1]:
-        return count[begin]
-    if count[end] > count[end-1]:
-        return count[end]
+    if lists[start] > lists[start+1]:
+        return lists[start]
+    if lists[last] > lists[last-1]:
+        return lists[last]
 
-    mid = (begin+end)//2
-    if count[mid-1] < count[mid] and count[mid+1] < count[mid]:
-        return count[mid]
-    if count[mid] < count[mid-1]:
-        return find_peak(count[begin:mid+1])
-    if count[mid] < count[mid+1]:
-        return find_peak(count[mid:end+1])
+    mid = (start+last)//2
+    if lists[mid-1] < lists[mid] and lists[mid+1] < lists[mid]:
+        return lists[mid]
+    if lists[mid] < lists[mid-1]:
+        return find_peak(lists[start:mid+1])
+    if lists[mid] < lists[mid+1]:
+        return find_peak(lists[mid:last+1])
     else:
-        return count[begin]
+        return lists[start]
