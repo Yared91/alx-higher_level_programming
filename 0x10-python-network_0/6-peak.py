@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Defines a peak-finding algorithm."""
+"""
+Definition of a peak-finding algorithm.
+"""
 
 
 def find_peak(list_of_integers):
@@ -7,17 +9,17 @@ def find_peak(list_of_integers):
     if list_of_integers == []:
         return None
 
-    size = len(list_of_integers)
-    if size == 1:
+    count = len(list_of_integers)
+    if count == 1:
         return list_of_integers[0]
-    elif size == 2:
+    elif count == 2:
         return max(list_of_integers)
 
-    mid = int(size / 2)
-    peak = list_of_integers[mid]
-    if peak > list_of_integers[mid - 1] and peak > list_of_integers[mid + 1]:
-        return peak
-    elif peak < list_of_integers[mid - 1]:
-        return find_peak(list_of_integers[:mid])
+    medium = int(size / 2)
+    top = list_of_integers[medium]
+    if top > list_of_integers[medium - 1] and top > list_of_integers[medium + 1]:
+        return top
+    elif top < list_of_integers[medium - 1]:
+        return find_peak(list_of_integers[:medium])
     else:
-        return find_peak(list_of_integers[mid + 1:])
+        return find_peak(list_of_integers[medium + 1:])
