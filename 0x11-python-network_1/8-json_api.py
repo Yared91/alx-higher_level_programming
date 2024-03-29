@@ -12,13 +12,13 @@ def post_request(letter):
     try:
         main = order.json()
         if main == {}:
-            print(f"{No result}")
+            print("No result")
         else:
             print("[{}] {}".format(main.get("id"), main.get("name")))
     except ValueError:
-        print(f"{Not a valid JSON}")
+        print("Not a valid JSON")
 
 
 if __name__ == "__main__":
-    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    letter = "" if len(argv) == 1 else argv[1]
     post_request(letter)
