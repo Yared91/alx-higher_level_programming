@@ -12,11 +12,11 @@ def post_request(url):
     try:
         main = order.json()
         if main == {}:
-            print(f{"No result"})
+            print("No result")
         else:
             print("[{}] {}".format(main.get("id"), main.get("name")))
     except ValueError:
-        print(f{"Not a valid JSON"})
+        print("Not a valid JSON")
 
 
 if __name__ == "__main__":
