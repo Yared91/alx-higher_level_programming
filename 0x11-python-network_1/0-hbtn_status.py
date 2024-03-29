@@ -11,9 +11,9 @@ def fetch_status():
         with urllib.request.urlopen(order) as response:
             main = response.read()
             print("Body response:")
-            print(f"\t- type: {type(main)}")
+            print(f"\t- type: {type{main}}")
             print(f"\t- content: {main}")
-            print(f"\t- utf8 content: {main.decode("utf-8")}")
+            print(f"\t- utf8 content: {main.decode('utf-8')}")
     except urllib.error.URLError as e:
         print(f"An error occurred: {e}")
 
