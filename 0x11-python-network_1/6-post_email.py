@@ -13,4 +13,4 @@ def send_post_request(url ,data):
 if __name__ == "__main__":
     url = argv[1]
     main = {"email": argv[2]}
-    send_post_request(url ,main)
+    send_post_request(url, main)
