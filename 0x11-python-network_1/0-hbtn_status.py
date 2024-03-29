@@ -16,5 +16,6 @@ def fetch_status():
     except urllib.error.URLError as e:
         print(f"An error occurred: {e}")
 
+
 if __name__ == "__main__":
     fetch_status()

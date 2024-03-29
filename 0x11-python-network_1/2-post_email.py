@@ -14,6 +14,8 @@ def post_request(url, email):
     with urllib.request.urlopen(order) as response:
         order_con = response.read().decode('utf-8')
         print(order_con)
+
+
 if __name__ == "__main__":
     url = argv[1]
     email = argv[2]
