@@ -4,21 +4,24 @@ import requests
 from sys import argv
 
 
-def post_request(letter):
+def post_request(url):
     """sends post request"""
-    payload = {"q": letter}
-    order = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+    top = {"q": url}
+    order = requests.post("http://0.0.0.0:5000/search_user", data=top)
 
     try:
         main = order.json()
         if main == {}:
-            print("No result")
+            print(f{"No result"})
         else:
             print("[{}] {}".format(main.get("id"), main.get("name")))
     except ValueError:
-        print("Not a valid JSON")
+        print(f{"Not a valid JSON"})
 
 
 if __name__ == "__main__":
-    letter = "" if len(argv) == 1 else argv[1]
-    post_request(letter)
+    if len(argv) == 1:
+        url = ""
+    else:
+        url = argv[1]
+    post_request(url)
