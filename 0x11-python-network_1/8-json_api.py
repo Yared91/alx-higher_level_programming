@@ -14,7 +14,7 @@ def post_request(letter):
         if main == {}:
             print(f"{No result}")
         else:
-            print(f"[{main.get("id")}] {main.get("name")}")
+            print("[{}] {}".format(main.get("id"), main.get("name")))
     except ValueError:
         print(f"{Not a valid JSON}")
 
