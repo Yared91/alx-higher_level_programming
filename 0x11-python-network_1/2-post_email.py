@@ -9,11 +9,11 @@ def post_request(url, email):
     values = {'email': email}
     data = urllib.parse.urlencode(values)
     data = data.encode('ascii')
-    order = urllib.request.Request(url, datat)
+    order = urllib.request.Request(url, data)
 
     with urllib.request.urlopen(order) as response:
         order_con = response.read().decode('utf-8')
-        print(order_con)
+        print(f"{order_con}")
 
 
 if __name__ == "__main__":
