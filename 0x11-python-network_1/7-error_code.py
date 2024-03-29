@@ -8,7 +8,7 @@ def fetch_url_content(url):
     """fetches the url content"""
     try:
         order = requests.get(url)
-        if order.status_code >= code:
+        if order.status_code >= 400:
             order.raise_for_status()
         print(f"{order.text}")
     except requests.exceptions.RequestException as e:
