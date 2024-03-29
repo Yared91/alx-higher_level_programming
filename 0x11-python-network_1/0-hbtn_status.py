@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Writes a Python script that fetches https://alx-intranet.hbtn.io/status"""
 import urllib.request
+import requests
 
 
 def fetch_status():
